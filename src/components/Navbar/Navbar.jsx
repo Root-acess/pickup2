@@ -6,6 +6,8 @@ import searchIconLight from '../../assets/search-w.png';
 import searchIconDark from '../../assets/search-b.png';
 import toggleDay from '../../assets/day.png';
 import toggleNight from '../../assets/night.png';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../App';
 
 const Navbar = ({ theme, setTheme }) => {
     const [isInputFocused, setInputFocused] = useState(false);
@@ -26,8 +28,16 @@ const Navbar = ({ theme, setTheme }) => {
         <div className={`navbar ${theme === 'dark' ? 'dark' : ''} ${isInputFocused ? 'blur-background' : ''}`}>
             <img src={theme === 'light' ? logoLight : logoDark} alt="" className='logo' />
             <ul>
-                <li>Home</li>
-                <li>HubsNearby</li>
+                <li>
+                    <Link to={ROUTES.HOME}>
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link to={ROUTES.HUBS}>
+                        HubsNearby
+                    </Link>
+                </li>
                 <li>About</li>
                 <li>Contact</li>
             </ul>
