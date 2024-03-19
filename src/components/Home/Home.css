@@ -1,0 +1,51 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .Home_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .home_content {
+    max-width: 50%;
+    padding-right: 20px; /* Add padding between content and button */
+  }
+  
+  .img {
+    max-width: 50%;
+  }
+  
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .img:hover {
+    transform: scale(1.05);
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff; /* Blue color */
+  }
+  
+  .title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .text {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  

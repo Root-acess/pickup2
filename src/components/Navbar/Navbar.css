@@ -1,4 +1,5 @@
 * {
+    text-decoration: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: #ffffff;
     padding: 1px 4%;
     transition: background-color 0.5s, color 0.5s; /* Only transition background-color and color */
 }
@@ -18,7 +19,7 @@
 .logo {
     width: 190px;
     cursor: pointer;
-    transition: width 0.5s; /* Transition logo width */
+    transition: 0.8s; 
 }
 
 ul {
@@ -54,13 +55,13 @@ li {
     background: transparent;
     border: 0;
     outline: 0;
-    color: #fff;
+    color:#ffffff;
     font-size: 18px;
     max-width: 200px;
 }
 
 .search-box input::placeholder {
-    color: #fff;
+    color:#ffffff;
 }
 
 .search-box img {
@@ -70,7 +71,7 @@ li {
 
 .dark .navbar {
     background: #000;
-    color: #fff;
+    color:#ffffff;
 }
 
 .dark .logo {
@@ -78,7 +79,7 @@ li {
 }
 
 .dark .search-box {
-    background: #fff;
+    background: #ffffff;
 }
 
 .dark .search-box input {
@@ -88,7 +89,11 @@ li {
 .dark .search-box input::placeholder {
     color: #222;
 }
+
 .blur-background {
-    filter: blur(5px); 
-    transition: filter 0.5s ease; /* Add a transition for smooth effect */
-}
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+  }
