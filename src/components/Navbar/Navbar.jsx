@@ -1,58 +1,48 @@
-import React, { useState } from 'react';
-import './Navbar.css';
-import logoLight from '../../assets/Pick-Up_1.png';
-import logoDark from '../../assets/Pick-Up_2.png';
-import searchIconLight from '../../assets/search-w.png';
-import searchIconDark from '../../assets/search-b.png';
-import toggleDay from '../../assets/day.png';
-import toggleNight from '../../assets/night.png';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ROUTES } from '../../App';
+import './Navbar.css';
+import lightLogo from '../../assets/Pick-Up_1.png';
+import darkLogo from '../../assets/Pick-Up_2.png';
+import lightSearchIcon from '../../assets/search-w.png';
+import darkSearchIcon from '../../assets/search-b.png';
+import dayIcon from '../../assets/day.png';
+import nightIcon from '../../assets/night.png';
 
 const Navbar = ({ theme, setTheme }) => {
-    const [isInputFocused, setInputFocused] = useState(false);
+  const toggleMode = () => setTheme(theme === 'light' ? 'dark' : 'light');
 
-    const toggleMode = () => {
-        theme === 'light' ? setTheme('dark') : setTheme('light');
-    };
+  return (
+    <div className={`navbar ${theme === 'dark' ? 'dark' : ''}`}>
+      <Link to="/">
+        <img src={theme === 'light' ? lightLogo : darkLogo} alt="Logo" className="logo" />
+      </Link>
+      <ul>
+        {navItems.map((item, index) => (
+          <NavItem key={index} to={item.to} theme={theme}>{item.label}</NavItem>
+        ))}
+      </ul>
+      <div className="search-box">
+        <input type="text" placeholder="Search" />
+        <img src={theme === 'light' ? lightSearchIcon : darkSearchIcon} alt="Search Icon" />
+      </div>
+      <img onClick={toggleMode} src={theme === 'light' ? nightIcon : dayIcon} alt="Toggle Icon" className="toggle-icon" />
+    </div>
+  );
+};
 
-    const handleInputFocus = () => {
-        setInputFocused(true);
-    };
+const NavItem = ({ to, children, theme }) => (
+  <li>
+    <Link to={to} style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+      {children}
+    </Link>
+  </li>
+);
 
-    const handleInputBlur = () => {
-        setInputFocused(false);
-    };
-
-    return (
-        <div className={`navbar ${theme === 'dark' ? 'dark' : ''} ${isInputFocused ? 'blur-background' : ''}`}>
-            <img src={theme === 'light' ? logoLight : logoDark} alt="" className='logo' />
-            <ul>
-                <li>
-                    <Link to={ROUTES.HOME}>
-                        Home
-                    </Link>
-                </li>
-                <li>
-                    <Link to={ROUTES.HUBS}>
-                        HubsNearby
-                    </Link>
-                </li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-            <div className='search-box'>
-                <input
-                    type="text"
-                    placeholder='Search'
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                />
-                <img src={theme === 'light' ? searchIconLight : searchIconDark} alt="" />
-            </div>
-            <img onClick={toggleMode} src={theme === 'light' ? toggleNight : toggleDay} alt="" className='toggle-icon' />
-        </div>
-    );
-}
+const navItems = [
+  { to: "/", label: "Home" },
+  { to: "/hubs", label: "Hubs Nearby" },
+  { to: "#", label: "About" },
+  { to: "#", label: "Contact" },
+];
 
 export default Navbar;
