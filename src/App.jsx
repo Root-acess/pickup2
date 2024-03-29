@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-import { Home } from './components/Home/Home';
+import Home  from './components/Home/Home';
 import HubsNearBy from './components/HubsNearBy/HubsNearBy';
+import Footer from './components/Footer/Footer';
 
 export const ROUTES = {
   HOME: '/',
@@ -16,13 +17,13 @@ const App = () => {
       <Router>
         <Navbar theme={theme} setTheme={setTheme} />
         <Routes>
-          <Route path={ROUTES.HOME} element={<Home/>}/>
+          <Route path={ROUTES.HOME} element={<Home />}/>
           <Route path={ROUTES.HUBS} element={<HubsNearBy/>}/>
         </Routes>
+        <Footer />
       </Router>
     </div>
   )
 }
 
-export default App
-//how to add my home component?
+export default App;
