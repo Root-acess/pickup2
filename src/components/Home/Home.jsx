@@ -45,30 +45,19 @@ const Home = () => {
             <p>Request for you first experiance</p>
             <div className="location-wrap">
               <div className="location-flex">
-                <span className="material-symbols-outlined">
-                  fiber_manual_record
-                </span>
                 <input
                   type="text"
-                  className="location"
                   placeholder="Enter location"
                 />
               </div>
-              <span className="material-symbols-outlined">
-                near_me
-              </span>
             </div>
             <div className="loc-dest-line">
               <hr />
             </div>
             <div className="location-wrap">
               <div className="location-flex">
-                <span className="material-symbols-outlined">
-                  stop
-                </span>
                 <input
                   type="text"
-                  className="destination"
                   placeholder="Enter destination"
                 />
               </div>
