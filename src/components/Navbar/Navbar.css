@@ -13,10 +13,11 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: #ffffff;
     padding: 1px 4%;
     transition: background-color 0.5s, color 0.5s; /* Only transition background-color and color */
+    margin-bottom: 25px;
 }
 
 .logo {
@@ -29,6 +30,7 @@ ul {
     flex: 1;
     list-style: none;
     text-align: center;
+    
 }
 
 li {

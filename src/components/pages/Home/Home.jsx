@@ -1,9 +1,11 @@
 import React from 'react'
 import './Home.css'
-import Btn1 from '../Buttons/Gstart'
-import Btn2 from '../Buttons/Learnmore'
-import hero1 from '../../assets/banner1.png'
-import hero2 from '../../assets/hero.png'
+import Btn1 from '../../../components/Buttons/Gstart'
+import Btn2 from '../../../components/Buttons/Learnmore'
+import hero1 from '../../../assets/banner1.png'
+import hero2 from '../../../assets/hero.png'
+import login from '../login/Login'
+
 
 const Home = () => {
   return (
@@ -13,7 +15,7 @@ const Home = () => {
             <h1>Send Your First Persel with Pick-up</h1>
             <br />
             <div className="main-btns">
-              <Btn1 />
+            <a href={(login)}><Btn1 /></a> 
             </div>
           </div>
         </div>

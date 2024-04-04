@@ -1,53 +1,51 @@
 .cssbuttons-io-button {
-    background: #0000FF;
-    color: white;
-    font-family: inherit;
-    padding: 0.35em;
-    padding-left: 1.2em;
-    font-size: 17px;
-    font-weight: 500;
-    border-radius: 0.9em;
-    border: none;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    box-shadow: inset 0 0 1.6em -0.6em #0000FF;
-    overflow: hidden;
-    position: relative;
-    height: 2.8em;
-    padding-right: 3.3em;
-  }
-  
-  .cssbuttons-io-button .icon {
-    background: white;
-    margin-left: 1em;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 2.2em;
-    width: 2.2em;
-    border-radius: 0.7em;
-    box-shadow: 0.1em 0.1em 0.6em 0.2em #0000FF;
-    right: 0.3em;
-    transition: all 0.3s;
-  }
-  
-  .cssbuttons-io-button:hover .icon {
-    width: calc(100% - 0.6em);
-  }
-  
-  .cssbuttons-io-button .icon svg {
-    width: 1.1em;
-    transition: transform 0.3s;
-    color: #0000FF;
-  }
-  
-  .cssbuttons-io-button:hover .icon svg {
-    transform: translateX(0.1em);
-  }
-  
-  .cssbuttons-io-button:active .icon {
-    transform: scale(0.95);
-  }
-  
+  background: #0000FF;
+  color: white;
+  font-family: inherit;
+  padding: 1em; /* Increased padding */
+  font-size: 20px; /* Increased font size */
+  font-weight: 500;
+  border-radius: 1.5em; /* Increased border radius */
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em #0000FF;
+  overflow: hidden;
+  position: relative;
+  height: 3.5em; /* Increased height */
+  padding-right: 4em; /* Increased padding */
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1.5em; /* Increased margin */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.8em; /* Increased height */
+  width: 2.8em; /* Increased width */
+  border-radius: 1.4em; /* Increased border radius */
+  box-shadow: 0.2em 0.2em 0.8em 0.2em #0000FF; /* Adjusted box shadow */
+  right: 0.5em; /* Adjusted positioning */
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 1em); /* Adjusted width */
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.5em; /* Increased icon size */
+  transition: transform 0.3s;
+  color: #0000FF;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.2em); /* Adjusted translation */
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
