@@ -1,5 +1,5 @@
 import React from 'react'
-import '../login/login.css';
+//import '../login/login.css';
 
 
 const Resister = () => {

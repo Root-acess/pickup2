@@ -6,6 +6,8 @@
     color: #fff;
     justify-content: space-evenly;
     margin-top: 80px;
+    z-index: 2;
+    position: relative; 
   }
   .footer-section {
     margin-top: 50px;

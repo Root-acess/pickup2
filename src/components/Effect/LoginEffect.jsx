@@ -1,7 +1,7 @@
 import React from 'react'
-import '../../components/Effect/effect.scss'
+import '../pages/login/login.scss'
 
-const LoginEffect = () => {
+const LoginEffec = () => {
     return (
         <div class="stars">
             <div class="star"></div>
@@ -118,4 +118,4 @@ const LoginEffect = () => {
     )
 }
 
-export default LoginEffect
+export default LoginEffec
