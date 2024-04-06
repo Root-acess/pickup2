@@ -18,7 +18,9 @@ const Navbar = ({ theme, setTheme }) => {
       </Link>
       <ul>
         {navItems.map((item, index) => (
-          <NavItem key={index} to={item.to} theme={theme}>{item.label}</NavItem>
+          <NavItem key={index} to={item.to} theme={theme}>
+            {item.label}
+          </NavItem>
         ))}
       </ul>
       <div className="search-box">

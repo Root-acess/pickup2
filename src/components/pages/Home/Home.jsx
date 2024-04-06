@@ -1,9 +1,11 @@
 import React from 'react'
 import './Home.css'
-import Btn1 from '../Buttons/Gstart'
-import Btn2 from '../Buttons/Learnmore'
-import hero1 from '../../assets/banner1.png'
-import hero2 from '../../assets/hero.png'
+import Btn1 from '../../../components/Buttons/Gstart'
+import Btn2 from '../../../components/Buttons/Learnmore'
+import hero1 from '../../../assets/banner1.png'
+import hero2 from '../../../assets/hero.png'
+import login from '../login/Login'
+
 
 const Home = () => {
   return (
@@ -13,7 +15,7 @@ const Home = () => {
             <h1>Send Your First Persel with Pick-up</h1>
             <br />
             <div className="main-btns">
-              <Btn1 />
+            <a href={(login)}><Btn1 /></a> 
             </div>
           </div>
         </div>
@@ -45,30 +47,19 @@ const Home = () => {
             <p>Request for you first experiance</p>
             <div className="location-wrap">
               <div className="location-flex">
-                <span className="material-symbols-outlined">
-                  fiber_manual_record
-                </span>
                 <input
                   type="text"
-                  className="location"
                   placeholder="Enter location"
                 />
               </div>
-              <span className="material-symbols-outlined">
-                near_me
-              </span>
             </div>
             <div className="loc-dest-line">
               <hr />
             </div>
             <div className="location-wrap">
               <div className="location-flex">
-                <span className="material-symbols-outlined">
-                  stop
-                </span>
                 <input
                   type="text"
-                  className="destination"
                   placeholder="Enter destination"
                 />
               </div>
