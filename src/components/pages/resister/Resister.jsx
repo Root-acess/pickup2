@@ -1,7 +1,6 @@
 import React from 'react'
 //import '../login/login.css';
 
-
 const Resister = () => {
   return (
     <div id="form-ui">
